@@ -81,11 +81,10 @@ TEMPLATES = [
         },
     },
 ]
-
-WSGI_APPLICATION = 'insta_site.wsgi.application'
 ASGI_APPLICATION = 'insta_site.asgi.application'
+WSGI_APPLICATION = 'insta_site.wsgi.application'
 
-CHANNELS_LAYERS = {
+CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
@@ -152,6 +151,7 @@ MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
